@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#00003c">
+  <meta name="description" content="AMI Education case study: a self-built zero-cost, Excel-based operations system connecting Sales, Academic, HR and Finance.">
+  <title>AMI Zero-Cost Operations System | Daxton Huynh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* GO2025 / AMI shared design language */
+    :root {
+      --navy:#00003c;--navy2:#090944;--purple:#3f3b70;--purple2:#33305e;
+      --yellow:#faff00;--white:#fff;--muted:#cfcde5;--green:#4be14e;
+      --line:rgba(230,230,255,.22);--max:1190px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--navy);color:var(--white);font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit} img{max-width:100%;display:block} p{line-height:1.78}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 80px));margin-inline:auto}
+
+    /* Hero: same photographic backdrop, type hierarchy and navy overlay as GO2025 */
+    .hero{position:relative;min-height:590px;display:flex;align-items:center;isolation:isolate;overflow:hidden;background:#03032d}
+    .hero-photo{position:absolute;inset:0;z-index:-3;background:url('assets/ami-workshop.jpg') center 43% / cover no-repeat;filter:saturate(.74)}
+    .hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,0,49,.97),rgba(0,0,51,.94) 42%,rgba(0,0,48,.79) 70%,rgba(0,0,50,.70)),linear-gradient(0deg,var(--navy),transparent 47%)}
+    .hero-inner{padding:70px 0 70px;position:relative;min-height:590px;display:flex;align-items:center}
+    .hero-content{width:min(900px,100%);position:relative;z-index:1}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--yellow);font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;margin:0 0 26px}
+    .eyebrow::before{content:"";width:32px;height:2px;background:var(--yellow)}
+    .eyebrow img{height:22px;width:auto;max-width:54px;object-fit:contain}
+    .eyebrow .date{color:#ededff;letter-spacing:.12em;font-size:10px;margin-left:9px}
+    .hero h1{font-weight:900;line-height:1.06;letter-spacing:-.05em;font-size:clamp(38px,4.9vw,69px);margin:0;max-width:1050px;text-transform:uppercase}
+    .hero h1 span{color:var(--yellow);display:block}
+    .headline-rule{height:3px;width:148px;background:var(--yellow);margin:27px 0 23px}
+    .hero .lead{color:#f2f1ff;font-size:clamp(13px,1.18vw,16px);line-height:1.75;max-width:790px;margin:0;font-weight:500}
+    .hero .lead strong{color:var(--yellow);font-weight:800}
+
+    /* Starting point: GO2025's two-block introduction + facts panel */
+    .intro{padding-top:52px;padding-bottom:48px;display:grid;grid-template-columns:.96fr 1.04fr;gap:47px;align-items:center;border-bottom:1px solid var(--line)}
+    .section-kicker{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--yellow);margin:0 0 14px}
+    h2{font-size:clamp(29px,3.45vw,45px);line-height:1.13;letter-spacing:-.045em;font-weight:900;margin:0 0 18px}
+    .intro p:not(.section-kicker){color:var(--muted);font-size:13px;margin:0}
+    .info-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(63,59,112,.40)}
+    .info-strip>div{padding:23px 17px;min-width:0}
+    .info-strip>div:not(:last-child){border-right:1px solid var(--line)}
+    .info-strip small{display:block;color:#b7b5d8;text-transform:uppercase;letter-spacing:.09em;font-size:9px;font-weight:800;margin-bottom:10px}
+    .info-strip strong{display:block;font-size:12px;line-height:1.55;font-weight:800}
+    .info-strip img{height:29px;width:auto;max-width:90px;object-fit:contain}
+
+    /* Main case study: GO2025's two-column challenge / initiative structure */
+    .challenge-and-results{display:grid;grid-template-columns:.98fr 1.02fr;gap:34px;padding-top:65px;padding-bottom:68px}
+    .column-block{min-width:0}
+    .bar-title{background:var(--purple);padding:12px 18px;color:var(--yellow);border-radius:7px;text-align:center;font-size:15px;font-weight:850;letter-spacing:-.02em;margin-bottom:17px}
+    .challenge-card{background:rgba(63,59,112,.46);border-radius:10px;padding:21px 22px;border-top:2px solid var(--yellow);border-left:1px solid rgba(255,255,255,.05);border-right:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:14px}
+    .challenge-card h3{font-size:16px;line-height:1.35;margin:0 0 11px;font-weight:800}
+    .challenge-card p{font-size:12px;line-height:1.8;margin:0;color:#e6e3f7}
+    .value-card{background:var(--purple);border:1px solid rgba(255,255,255,.09);border-radius:13px;min-height:168px;display:grid;grid-template-columns:155px minmax(0,1fr);gap:18px;align-items:center;padding:22px 24px;margin-bottom:14px}
+    .value-number{font-weight:900;font-size:clamp(49px,4.5vw,70px);line-height:1;letter-spacing:-.055em;color:var(--green)}
+    .value-number.yellow{color:var(--yellow)}
+    .value-number small{display:block;font-weight:600;color:#e8e6f6;font-size:9.5px;line-height:1.45;letter-spacing:0;margin-top:12px}
+    .value-body h3{font-size:19px;margin:0 0 10px;font-weight:800}
+    .value-body p{font-size:12px;color:#eeecfa;line-height:1.72;margin:0}
+    strong{font-weight:800}
+
+    /* Full-width solution architecture: images take priority over text */
+    .visual-section{background:linear-gradient(180deg,#090947 0%,#04043d 55%,var(--navy) 100%);padding:64px 0 74px}
+    .band{display:flex;align-items:center;gap:25px;margin-bottom:28px}
+    .band h2{margin:0;white-space:normal;font-size:clamp(25px,2.8vw,37px)}
+    .band .line{height:2px;background:var(--yellow);flex:1}
+    .solution-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 28px}
+    .solution-point{padding:21px 25px 20px;background:rgba(63,59,112,.52);border-radius:10px;border-top:2px solid var(--yellow);font-size:13px;line-height:1.78;color:#f0edfa;display:flex;gap:15px;align-items:flex-start}
+    .solution-point .marker{color:var(--yellow);font-size:22px;font-weight:900;line-height:1.1}
+    .diagram-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:15px}
+    .diagram-head h3{font-size:22px;margin:0;font-weight:800;line-height:1.3}
+    .diagram-head p{font-size:11px;color:var(--muted);margin:0}
+    .legend{display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:11px;color:#eae9f6;margin-bottom:15px}
+    .legend .automatic{color:var(--green);font-weight:850}.legend .manual{color:#ff8f92;font-weight:850}
+    /* ARCHITECTURE — snug frame with original 1194:928 ratio; complete card fits within a desktop viewport. */
+    .architecture{
+      width:min(100%, 740px, calc(128.66dvh - 178px));
+      margin:0 auto;
+      padding:13px;
+      background:var(--purple);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:13px;
+    }
+    .architecture img{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:1194 / 928;
+      object-fit:contain;
+      border-radius:7px;
+      background:#03032e;
+    }
+    .architecture figcaption{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:12px;font-size:10.5px;color:#dedcef;line-height:1.55}
+    .enlarge{background:var(--yellow);color:var(--navy);font:800 11px Montserrat,Arial,sans-serif;cursor:pointer;border:0;border-radius:99px;padding:12px 16px;white-space:nowrap}
+    .enlarge:hover{filter:brightness(.92)}
+
+    /* Screenshots belong to 02 / Solution design, not a separate numbered section. */
+    .screenshots{margin-top:46px;padding:32px 0 0;border-top:1px solid var(--line)}
+    .screenshots .band h2{font-size:clamp(20px,2.3vw,29px)}
+    .screenshots-intro{color:var(--muted);font-size:13px;margin:-10px 0 24px}
+    .shots-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .shot{margin:0;padding:15px;background:var(--purple);border:1px solid rgba(255,255,255,.1);border-radius:13px;display:flex;flex-direction:column}
+    .shot img{width:100%;height:340px;object-fit:contain;background:#f5f5f5;border-radius:8px}
+    .shot figcaption{padding:16px 5px 9px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex:1}
+    .shot-label{font-size:12px;line-height:1.6;color:#f0eefa;max-width:390px}
+    .shot button{flex-shrink:0;padding:9px 13px;background:transparent;border:1px solid rgba(250,255,0,.56);border-radius:99px;color:var(--yellow);font:800 10px Montserrat,Arial,sans-serif;cursor:pointer}
+    .shot button:hover{background:rgba(250,255,0,.1)}
+    .footer{border-top:1px solid var(--line);padding:24px 0 35px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:11px;color:#b7b5ce}
+    .footer a{color:var(--yellow);font-weight:750;text-decoration:none}.footer a:hover{text-decoration:underline}
+
+    /* Full image lightbox */
+    dialog{background:#090942;color:white;border:1px solid rgba(255,255,255,.24);border-radius:14px;padding:19px;width:min(96vw,1380px);max-height:96vh;box-shadow:0 25px 90px rgba(0,0,0,.7)}
+    dialog::backdrop{background:rgba(0,0,19,.88)}
+    dialog img{max-width:100%;max-height:83vh;width:auto;object-fit:contain;margin:auto}
+    dialog button{display:block;margin:0 0 13px auto;background:transparent;color:white;border:1px solid #aaa6c8;border-radius:6px;padding:7px 13px;cursor:pointer;font:700 12px Montserrat,Arial,sans-serif}
+
+    @media(max-width:1050px){
+      .hero h1{font-size:clamp(36px,5.3vw,57px)}.challenge-and-results{gap:22px}
+      .value-card{grid-template-columns:110px 1fr;padding:18px;gap:13px}.value-number{font-size:51px}
+      .value-body h3{font-size:16px}.value-body p{font-size:11.5px}
+      .shot img{height:280px}
+    }
+    @media(max-width:760px){
+      .wrap{width:min(100% - 36px,590px)}.hero,.hero-inner{min-height:auto}
+      .hero-inner{padding:58px 0 68px}.hero h1{font-size:clamp(37px,8.6vw,58px)}
+      .hero .lead{font-size:13px}.eyebrow{gap:9px;flex-wrap:wrap}.eyebrow .date{margin-left:0}
+      .intro{grid-template-columns:1fr;gap:25px;padding:42px 0}.intro .info-strip{order:-1}
+      .challenge-and-results{grid-template-columns:1fr;padding:47px 0;gap:32px}
+      .value-card{grid-template-columns:120px 1fr;min-height:142px}
+      .visual-section{padding:45px 0 55px}.solution-points{grid-template-columns:1fr;gap:12px}
+      .diagram-head{align-items:start;flex-direction:column;gap:6px}
+      /* On mobile, use the full available width so small labels remain legible. */
+      .architecture{width:100%;padding:9px}
+      .architecture img{width:100%;height:auto}
+      .architecture figcaption{flex-direction:column;align-items:start;gap:12px}
+      .shots-grid{grid-template-columns:1fr}.shot img{height:auto;max-height:350px}
+      .screenshots{margin-top:34px;padding:28px 0 0}.footer{flex-direction:column;align-items:start;gap:12px}
+    }
+    @media(max-width:430px){
+      .hero h1{font-size:clamp(30px,8.8vw,42px)}
+      .hero .lead{font-size:12px}
+      .info-strip{grid-template-columns:1fr}.info-strip>div{padding:12px 17px}.info-strip>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}
+      .info-strip small{margin-bottom:3px}.info-strip img{height:24px}
+      .value-card{grid-template-columns:105px 1fr;padding:14px}.value-number{font-size:45px}
+      .value-number small{font-size:9px}
+      .value-body h3{font-size:15px}.value-body p{font-size:10.7px}
+      .solution-point{padding:17px 15px}.band .line{display:none}
+      .shot figcaption{align-items:flex-start;flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-content">
+        <p class="eyebrow"><img src="assets/ami-logo.png" alt="AMI Education"><span class="date">Mar – Aug 2024</span></p>
+        <h1 id="page-title"><span>STREAMLINE END-TO-END OPERATIONS WITH</span> SELF-BUILT ZERO-COST SYSTEM</h1>
+        <div class="headline-rule"></div>
+        <p class="lead">AMI faced the challenge of scaling operations with extremely limited resources. With no budget for expensive ERP, CRM, or accounting systems, and no headcount for specialized staff, the company sought a <strong>zero-cost, Excel-based solution</strong> to automate workflows across Sales, Academic, HR, and Finance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro wrap" aria-label="The starting point">
+    <div class="info-strip" aria-label="Project facts">
+      <div><small>Organization</small><strong><img src="assets/ami-logo.png" alt="AMI Education"></strong></div>
+      <div><small>Focus</small><strong>Information system design</strong></div>
+      <div><small>Approach</small><strong>Workflow automation</strong></div>
+    </div>
+    <div>
+      <p class="section-kicker">01 / The starting point</p>
+      <h2>Scaling operations with extremely limited resources.</h2>
+      <p>Information system design <span aria-hidden="true">·</span> Workflow automation <span aria-hidden="true">·</span> Resource optimization</p>
+    </div>
+  </section>
+
+  <section class="challenge-and-results wrap" aria-label="Business challenges and values">
+    <div class="column-block">
+      <div class="bar-title">Challenges</div>
+      <article class="challenge-card">
+        <h3>Limited resources</h3>
+        <p>As an early-stage startup, AMI could not afford to hire specialized staff. Some employees had to wear various hats, making workload reduction essential.</p>
+      </article>
+      <article class="challenge-card">
+        <h3>No budget for professional systems</h3>
+        <p>ERP, CRM, and class management tools in Vietnam are prohibitively expensive for a small education business.</p>
+      </article>
+      <article class="challenge-card">
+        <h3>Fragmented data flows</h3>
+        <p>Manual duplication of data across teams (Sales, Academic, HR, Finance) not only consumed time and effort but also created room for errors. The lack of integrated data flows meant that a single update had to be repeated in multiple places instead of cascading automatically into outputs such as class assignments, receivables, payroll, and P&amp;L reporting.</p>
+      </article>
+    </div>
+    <div class="column-block">
+      <div class="bar-title">Business values</div>
+      <article class="value-card">
+        <div class="value-number">70%<small>reduced administrative workload</small></div>
+        <div class="value-body"><h3>Reduced workload</h3><p>through developing a <strong>zero-cost, Excel-based information system</strong> that integrates all business functions.</p></div>
+      </article>
+      <article class="value-card">
+        <div class="value-number yellow">10%<small>saved monthly staffing expenses</small></div>
+        <div class="value-body"><h3>Cost efficiency</h3><p>Enabled <strong>real-time, automated reporting of operational data</strong>, reducing redundant tasks and optimizing resources across departments.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="visual-section" aria-labelledby="system-title">
+    <div class="wrap">
+      <p class="section-kicker">02 / Solution design</p>
+      <div class="band"><h2 id="system-title">Excel-based operation systems</h2><span class="line" aria-hidden="true"></span></div>
+      <div class="solution-points">
+        <div class="solution-point"><span class="marker" aria-hidden="true">✓</span><span>Built integrated Excel-based systems covering Sales, Academic, and Finance, enabling centralized data management and automation.</span></div>
+        <div class="solution-point"><span class="marker" aria-hidden="true">✓</span><span>Streamlined operations with single-input workflows, automated revenue recognition, payroll, and dynamic P&amp;L reporting.</span></div>
+      </div>
+      <div class="diagram-head"><h3>System architecture</h3><p>Interactive: select the diagram to view in full size</p></div>
+      <div class="legend"><span><span class="automatic">✓</span> Automatically updated</span><span><span class="manual">✕</span> Manual input</span></div>
+      <figure class="architecture">
+        <img src="assets/system-architecture.png" alt="Original integrated Excel system architecture across Sales, Academic, Human Resource, Finance, and Support Admin" loading="lazy">
+        <figcaption>
+          <span>Original system architecture from the AMI Education project portfolio. Click below to enlarge and inspect the flows.</span>
+          <button class="enlarge" type="button" data-enlarge="assets/system-architecture.png" data-alt="Integrated Excel system architecture">VIEW SYSTEM ARCHITECTURE ↗</button>
+        </figcaption>
+      </figure>
+      <div class="screenshots" aria-labelledby="screens-title">
+        <div class="band"><h2 id="screens-title">Selected system screenshots</h2><span class="line" aria-hidden="true"></span></div>
+        <p class="screenshots-intro">Excel-based operations and reporting, from the original case study.</p>
+        <div class="shots-grid">
+          <figure class="shot">
+            <img src="assets/enrollment-database.png" alt="Original Excel workbook showing operational tables and worksheets" loading="lazy">
+            <figcaption><span class="shot-label">Integrated Excel workbook — underlying data and operations worksheets.</span><button type="button" data-enlarge="assets/enrollment-database.png" data-alt="Integrated Excel workbook">VIEW FULL SIZE ↗</button></figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/sales-dashboard.png" alt="Original AMI sales pipeline dashboard in Excel" loading="lazy">
+            <figcaption><span class="shot-label">Sales pipeline dashboard — reporting and performance visualization.</span><button type="button" data-enlarge="assets/sales-dashboard.png" data-alt="AMI sales pipeline dashboard">VIEW FULL SIZE ↗</button></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap"><span>© 2026 Daxton Huynh · AMI Education · Zero-Cost Operations System</span><a href="../../index.html#business">← Back to Me in Business</a></footer>
+<dialog id="image-viewer" aria-label="Expanded project image">
+  <button type="button" id="close-viewer">Close ✕</button>
+  <img id="expanded-image" alt="">
+</dialog>
+<script>
+  const viewer = document.getElementById('image-viewer');
+  const expandedImage = document.getElementById('expanded-image');
+  document.querySelectorAll('[data-enlarge]').forEach(button => {
+    button.addEventListener('click', () => {
+      expandedImage.src = button.dataset.enlarge;
+      expandedImage.alt = button.dataset.alt || 'Expanded project image';
+      viewer.showModal();
+    });
+  });
+  document.getElementById('close-viewer').addEventListener('click', () => viewer.close());
+  viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+</script>
+</body>
+</html>

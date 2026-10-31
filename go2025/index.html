@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#00003c">
+  <meta name="description" content="The #GO2025 Initiative: how AMI Education approached break-even through community partnerships, a zero-cost sales strategy and hybrid academic delivery.">
+  <title>#GO2025 Initiative | Daxton Huynh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#00003c;--navy2:#090944;--purple:#3f3b70;--purple2:#33305e;--yellow:#faff00;--cream:#fff;--muted:#cfcde5;--green:#4be14e;--line:rgba(230,230,255,.22);--max:1190px }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--navy);color:var(--cream);margin:0;font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}a{color:inherit}p{line-height:1.78}
+    a:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
+    .wrap{width:min(var(--max),calc(100% - 80px));margin-inline:auto}
+    .hero{position:relative;min-height:590px;overflow:hidden;isolation:isolate;display:flex;align-items:center;background:#03032d}
+    .hero-photo{position:absolute;inset:0;z-index:-3;background:url('assets/event-hero.webp') center 47% / cover no-repeat;filter:saturate(.75)}
+    .hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,0,49,.96) 0%,rgba(0,0,51,.91) 40%,rgba(0,0,48,.73) 72%,rgba(0,0,50,.64) 100%),linear-gradient(0deg,var(--navy) 0%,transparent 43%)}
+    .hero-inner{position:relative;padding-top:70px;padding-bottom:68px;min-height:590px;display:flex;align-items:center}
+    .hero-content{max-width:710px;position:relative;z-index:2}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--yellow);font-size:12px;letter-spacing:.21em;text-transform:uppercase;font-weight:800;margin:0 0 27px}
+    .eyebrow:before{content:"";width:32px;height:2px;background:var(--yellow)}
+    .hero h1{margin:0;font-weight:900;line-height:1.05;letter-spacing:-.05em;font-size:clamp(45px,6vw,84px)}
+    .hero h1 span{color:var(--yellow);display:block}
+    .headline-rule{height:3px;background:var(--yellow);width:148px;margin:26px 0 24px}
+    .hero .lead{font-size:clamp(13.5px,1.25vw,16px);color:#f2f1ff;font-weight:500;max-width:700px;margin:0 0 12px;line-height:1.7}
+    .hero .lead strong{font-weight:800;color:var(--yellow)}
+    .hero-pills{display:flex;flex-wrap:wrap;gap:9px;max-width:560px;margin-top:20px}
+    .hero-pill{padding:9px 13px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:11px;font-weight:700;color:#eeeefe;background:rgba(10,10,61,.56)}
+    .hero-speaker{position:absolute;z-index:1;width:350px;height:auto;right:0;bottom:-14px;filter:drop-shadow(0 20px 20px rgba(0,0,20,.28));pointer-events:none}
+    .intro{padding-top:46px;padding-bottom:40px;display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;border-bottom:1px solid var(--line)}
+    .section-kicker{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--yellow);margin:0 0 14px}
+    h2{font-weight:850;line-height:1.13;letter-spacing:-.04em;font-size:clamp(30px,3.5vw,45px);margin:0 0 17px}
+    .intro p:not(.section-kicker){color:var(--muted);font-size:14px;margin:0}
+    .info-strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(63,59,112,.40)}
+    .info-strip>div{padding:24px 20px;min-width:0}.info-strip>div:not(:last-child){border-right:1px solid var(--line)}
+    .info-strip small{display:block;color:#b7b5d8;text-transform:uppercase;letter-spacing:.11em;font-size:10px;font-weight:800;margin-bottom:10px}
+    .info-strip strong{font-size:13px;line-height:1.45;display:block}
+    .band{display:flex;align-items:center;gap:26px;margin-bottom:29px}
+    .band h2{margin:0;font-size:clamp(23px,2.7vw,33px);white-space:nowrap}
+    .band .line{height:2px;background:var(--yellow);flex:1}
+    .challenge-and-plan{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;padding-top:62px;padding-bottom:64px}
+    .column-block{min-width:0}
+    .bar-title{background:var(--purple);padding:11px 18px;color:var(--yellow);border-radius:7px;text-align:center;font-size:15px;font-weight:850;letter-spacing:-.02em;margin-bottom:16px}
+    .quote-card,.constraint-mini{background:rgba(63,59,112,.46);padding:21px 19px;border-radius:10px;border-top:2px solid var(--yellow);border-left:1px solid rgba(255,255,255,.05);border-right:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+    .quote-card{margin-bottom:16px}
+    .quote-card h3,.constraint-mini h3{font-size:14px;line-height:1.35;margin:0 0 10px;font-weight:800}
+    .quote-card p,.constraint-mini p{font-size:11.5px;line-height:1.76;color:#e2dff1;margin:0}
+    .press-board{display:flex;gap:12px;align-items:center;justify-content:center;min-height:180px;padding:18px 12px;margin:16px 0 0;background:rgba(255,255,255,.035);border-radius:11px;overflow:hidden}
+    .press-board img{width:33%;max-height:160px;object-fit:cover;object-position:top;border:5px solid white;box-shadow:0 8px 18px rgba(0,0,0,.32)}
+    .press-board img:first-child{transform:rotate(-9deg)}.press-board img:last-child{transform:rotate(7deg)}
+    .constraints-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .strategy-top{display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1fr);align-items:center;gap:22px;padding:5px 0 26px}
+    .strategy-top img{width:100%;max-width:260px;filter:drop-shadow(0 3px 10px rgba(0,0,10,.2));justify-self:start}
+    .strategy-top p{font-size:12px;line-height:1.8;margin:0;color:#e6e3f7;max-width:680px}
+    .pillar{padding:24px 0 30px;border-top:1px solid var(--line)}
+    .pillar h3{font-size:18px;font-weight:800;margin:0 0 14px}
+    .pillar-layout{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
+    .pillar ul{padding-left:18px;margin:0;color:#e8e6f6;font-size:12px;line-height:1.82}
+    .pillar li{margin-bottom:8px}
+    .pillar strong{color:#fff;font-weight:800}
+    .pillar-media{display:grid;gap:12px}
+    .pillar-img-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .pillar-img-stack img{height:220px;object-fit:cover;width:100%;border-radius:10px}
+    .pillar-single img{height:270px;object-fit:cover;width:100%;border-radius:10px}
+    .academic{grid-template-columns:1fr}
+    .impact-section{padding:62px 0 72px;background:linear-gradient(180deg,#060642, #00003c)}
+    .impact-lead{max-width:750px;color:var(--muted);font-size:13px;margin:-4px 0 24px}
+    .impact-hero{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:center;background:var(--purple);border-radius:14px;padding:16px 20px;margin-bottom:12px;border:1px solid rgba(255,255,255,.09)}
+    .impact-number{text-align:center;font-size:clamp(50px,4.6vw,72px);line-height:.9;font-weight:900;color:var(--green);letter-spacing:-.055em}
+    .impact-number span{font-size:15px;color:#f0eefb;letter-spacing:0;display:block;margin-top:7px}
+    .impact-description h3{margin:0 0 8px;font-size:19px}.impact-description p{color:#e3e1f7;font-size:12px;margin:0;line-height:1.72}
+    .impact-description strong{color:var(--yellow)}
+    .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .kpi{min-height:132px;background:var(--purple);padding:14px 14px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
+    .kpi-label{font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#e6e4f5;font-weight:750}
+    .kpi-value{font-weight:900;font-size:clamp(28px,2.9vw,42px);line-height:1.02;color:var(--yellow);letter-spacing:-.045em;margin:5px 0 3px}
+    .kpi.green .kpi-value{color:var(--green)}
+    .kpi-note{color:#d2cfe9;font-size:9.5px;line-height:1.42;margin:0}.kpi-note strong{color:white}
+    .kpi-dual .dual-row{display:block;margin-top:4px}.kpi-dual .dual-row + .dual-row{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15)}
+    .kpi-dual .mini-label{display:block;font-size:8.5px;color:#d2cfe9;line-height:1.35;text-transform:uppercase;letter-spacing:.04em}
+    .asterisk{font-size:10.5px;line-height:1.65;color:#a9a7c7;margin:14px 0 0}
+    .footer{border-top:1px solid var(--line);padding:24px 0 35px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:11px;color:#b7b5ce}
+    .footer a{font-weight:750;color:var(--yellow);text-decoration:none}.footer a:hover{text-decoration:underline}
+    @media(max-width:1050px){.hero-content{max-width:620px}.hero-speaker{width:270px;right:-36px;opacity:.93}.hero h1{font-size:clamp(43px,6.3vw,66px)}.hero .lead{max-width:540px}.challenge-and-plan{gap:22px}.pillar-img-stack img{height:210px}.pillar-single img{height:250px}.strategy-top img{width:210px}}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,590px)}.hero,.hero-inner{min-height:700px}.hero-inner{align-items:flex-start;padding-top:56px;padding-bottom:250px}.hero h1{font-size:clamp(43px,10vw,63px)}.hero .lead{font-size:13px;max-width:98%}.hero-photo{background-position:60% center}.hero-shade{background:linear-gradient(180deg,rgba(0,0,48,.91),rgba(0,0,48,.89) 48%,rgba(0,0,48,.75)),linear-gradient(0deg,var(--navy),transparent)}.hero-speaker{width:235px;right:-48px;bottom:-15px;opacity:.96}.intro{grid-template-columns:1fr;gap:26px;padding-top:45px;padding-bottom:43px}.info-strip>div{padding:16px 12px}.info-strip strong{font-size:11px}.challenge-and-plan{grid-template-columns:1fr;padding:46px 0;gap:36px}.constraints-bottom{gap:10px}.strategy-top img{width:170px}.pillar-img-stack img{height:170px}.pillar-single img{height:210px}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.impact-hero{grid-template-columns:1fr;gap:10px;text-align:center}.impact-description h3{font-size:18px}}
+    @media(max-width:500px){.strategy-top{grid-template-columns:1fr;}.hero,.hero-inner{min-height:730px}.hero-inner{padding-top:43px}.hero h1{font-size:clamp(40px,11.2vw,53px)}.hero .lead{font-size:12px;line-height:1.72}.eyebrow{font-size:10px}.hero-speaker{width:225px;right:-63px}.info-strip{grid-template-columns:1fr}.info-strip>div{padding:11px 16px}.info-strip>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}.info-strip small{margin-bottom:3px}.strategy-top img{width:140px}.constraints-bottom{grid-template-columns:1fr}.pillar-img-stack img{height:148px}.pillar-single img{height:178px}.impact-section{padding:52px 0 60px}.kpi{min-height:126px;padding:12px 12px 10px}.kpi-value{font-size:32px}.kpi-label,.kpi-note,.kpi-dual .mini-label{font-size:9px}.impact-hero{padding:17px}.footer{flex-direction:column;align-items:flex-start;gap:12px}}
+    /* INTRO BLOCK SWAP: info box on left, starting-point text on right (desktop only) */
+    @media (min-width: 761px) {
+      .intro { grid-template-columns: .92fr 1.08fr; }
+      .intro .info-strip { order: -1; }
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-content">
+        <p class="eyebrow"><img src="assets/ami-logo.png" alt="AMI Education" style="height:18px;width:auto;display:inline-block;vertical-align:middle"></p>
+        <h1 id="page-title"><span>#GO2025 Initiative</span> ZERO-COST STRATEGY</h1>
+        <div class="headline-rule"></div>
+        <p class="lead">Founded in March 2024, AMI Education set out with a bold mission: to bridge the gap in access to high-quality English education in Bac Lieu, a rural province in Vietnam. Launched in June 2024, the <strong>#GO2025 Initiative</strong> aimed to reach <strong>monthly break-even by June 2025</strong>. Built around the “Road to University” vision, it targeted high school students with A1–B2 English levels and was anchored on three interconnected pillars: <strong>Sales, Marketing, and Academic Delivery.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro wrap" aria-labelledby="context-title">
+    <div>
+      <p class="section-kicker">01 / The starting point</p>
+      <h2 id="context-title">Building a sustainable model where resources are limited.</h2>
+      <p>Founded in March 2024, AMI Education set out with a bold mission: to bridge the gap in access to high-quality English education in Bac Lieu, a rural province in Vietnam. Launched in June 2024, the #GO2025 Initiative aimed to reach monthly break-even by June 2025.</p>
+    </div>
+    <div class="info-strip" aria-label="Project facts">
+      <div><small>Organization</small><strong><img src="assets/ami-logo.png" alt="AMI Education" style="height:28px;width:auto;display:block"></strong></div>
+      <div><small>Audience</small><strong>High school students, A1–B2</strong></div>
+      <div><small>Strategic target</small><strong>Monthly break-even by Jun 2025</strong></div>
+    </div>
+  </section>
+
+  <section class="challenge-and-plan wrap" aria-label="Challenges and strategic approach">
+    <div class="column-block">
+      <div class="bar-title">Community-driven constraints</div>
+      <div class="quote-card">
+        <h3>“Score-driven” culture</h3>
+        <p>Vietnamese students often take extra English classes with their own school teachers, focusing on <strong>boosting school GPA.</strong></p>
+        <p style="margin-top:10px">This deep-rooted culture made it difficult to <strong>shift student mindsets</strong> toward developing “real” English competencies.</p>
+        <div class="press-board" aria-label="News clippings used in the original portfolio to illustrate education challenges">
+          <img src="assets/press-vnexpress.webp" alt="Vietnam Express English education article clipping" loading="lazy">
+          <img src="assets/press-thanhnien.webp" alt="Thanh Nien English learning article clipping" loading="lazy">
+          <img src="assets/press-laodong.webp" alt="Lao Dong English education article clipping" loading="lazy">
+        </div>
+      </div>
+      <div class="constraints-bottom">
+        <div class="constraint-mini">
+          <h3>Price sensitivity</h3>
+          <p>The average monthly income in Bac Lieu was ~<strong>CAD 310</strong>; families spent ~<strong>CAD 100 per child</strong> on education (<em>Bac Lieu People’s Committee, 2024</em>), while <strong>AMI’s average tuition was ~CAD 285</strong> to ensure expense coverage.</p>
+        </div>
+        <div class="constraint-mini">
+          <h3>Burdened IELTS teacher costs</h3>
+          <p>With ~<strong>95%</strong> of applicants lacking <strong>IELTS teaching qualifications</strong>, the shortage of competent teachers in Bac Lieu drove hiring costs to <strong>40% of total monthly expenses.</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="column-block">
+      <div class="bar-title">#GO2025 Initiative</div>
+      <div class="strategy-top">
+        <img src="assets/strategy-wheel.webp" alt="Original GO2025 strategy wheel integrating Marketing, Sales and Academic" loading="lazy">
+        <p>The strategy connected customer access, student experience and commercial sustainability instead of treating Sales, Marketing and Academic Delivery as separate workstreams.</p>
+      </div>
+      <div class="pillar">
+        <h3>Marketing</h3>
+        <div class="pillar-layout">
+          <div class="pillar-media"><div class="pillar-img-stack">
+            <img src="assets/student-event.webp" alt="Students attending an AMI career orientation event" loading="lazy">
+            <img src="assets/school-event.webp" alt="AMI community and education event participants" loading="lazy">
+          </div></div>
+          <ul>
+            <li>Reached <strong>2,400+ students</strong> via career orientation and scholarship events (<em>Road to University, Coffee Talk, Orientation Talks</em>), and in partnership with <strong>four largest high schools</strong> in the province.</li>
+            <li>Co-organized free <strong>Mega Test series</strong> with the province’s biggest gifted high school, offering value upfront and capturing qualified leads.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Sales</h3>
+        <div class="pillar-layout">
+          <div class="pillar-media"><div class="pillar-single"><img src="assets/community-partnership.jpg" alt="AMI community partnership at a local school" loading="lazy"></div></div>
+          <ul>
+            <li>Built zero-cost, revenue-sharing partnerships through a success-fee model with <strong>10 private education institutions</strong> and <strong>10+ local vendors</strong> (cafés, bookstores, etc.).</li>
+            <li>Secured an <strong>MoU</strong> with Bac Lieu High School for the Gifted, offering <strong>free 20-hour IELTS hackathons</strong> and <strong>automatic discounts</strong> for medalists of the National Excellent Student Selection Contest.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Academic delivery</h3>
+        <div class="pillar-layout academic">
+          <div class="pillar-media"><div class="pillar-single"><img src="assets/hybrid-class.jpg" alt="Hybrid teaching session with AMI Education students" loading="lazy"></div></div>
+          <ul>
+            <li>Pioneered a <strong>hybrid learning model</strong> that enabled access to top-tier teachers from anywhere in the world - optimizing cost per student while ensuring consistently high academic outcomes.</li>
+            <li>Launched the <strong>1-2-3-6 Framework</strong> - a structured feedback process to monitor learning experience and student progress at four key milestones: <strong>1 day after start, 2-week trial, 3-month midpoint, and 6-month course end.</strong></li>
+            <li>Launched <strong>“Growth Talk”</strong> - a no-cost, 1-on-1 mentorship program, offering students direct access to AMI’s leadership team for tailored career orientation sessions. This initiative reinforced AMI’s identity as a lifelong education mentor - not just a language trainer.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact-section" aria-labelledby="impact-title">
+    <div class="wrap">
+      <p class="section-kicker">02 / Measurable results</p>
+      <div class="band"><h2 id="impact-title">What we achieved by Q1 2025</h2><span class="line" aria-hidden="true"></span></div>
+      <p class="impact-lead">Commercial performance, delivery efficiency and student experience were evaluated against the initiative's stated targets.</p>
+      <div class="impact-hero">
+        <div class="impact-number">9th<span>month</span></div>
+        <div class="impact-description"><h3>Monthly break-even point</h3><p>Reached monthly break-even in <strong>March 2025</strong>, <strong>3 months ahead of plan.</strong></p></div>
+      </div>
+      <div class="kpi-grid">
+        <article class="kpi green"><span class="kpi-label">Qualified leads</span><strong class="kpi-value">500+</strong><p class="kpi-note">qualified leads</p></article>
+        <article class="kpi yellow"><span class="kpi-label">IELTS teaching costs</span><strong class="kpi-value">▼18%</strong><p class="kpi-note">IELTS teaching costs<br><strong>(Project target: 20%)</strong></p></article>
+        <article class="kpi yellow"><span class="kpi-label">Q1-2025 revenue growth</span><strong class="kpi-value">▲23%</strong><p class="kpi-note">Q1-2025 revenue growth<br><strong>(Project target: 25%)</strong></p></article>
+        <article class="kpi green"><span class="kpi-label">Conversion rate</span><strong class="kpi-value">16%</strong><p class="kpi-note">conversion rate<br><strong>(Project target: 15%)</strong></p></article>
+        <article class="kpi yellow"><span class="kpi-label">Retention rate</span><strong class="kpi-value">30%</strong><p class="kpi-note">retention rate<br><strong>(Project target: 35%)</strong></p></article>
+        <article class="kpi green"><span class="kpi-label">Google reviews</span><strong class="kpi-value">100%</strong><p class="kpi-note">5-star reviews on Google</p></article>
+      </div>
+      <p class="asterisk">Results updated as of June 2025.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap">
+  <span>© 2026 Daxton Huynh · #GO2025 Initiative · AMI Education</span>
+  <a href="../../index.html#business">← Back to Me in Business</a>
+</footer>
+</body>
+</html>

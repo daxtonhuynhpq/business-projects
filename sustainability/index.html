@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#00003c">
+<meta name="description" content="Siemens Vietnam Sustainability Strategy — translating global sustainability priorities into industry-specific commercial opportunities and market activation.">
+<title>Sustainability @ Siemens Vietnam | Daxton Huynh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#00003c;--navy2:#070743;--purple:#3f3b70;--purple2:#302e5b;--yellow:#faff00;--green:#4be14e;--muted:#cbc9e6;--white:#fbfaff;--line:rgba(235,235,255,.18);--max:1190px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);font-family:Montserrat,Arial,sans-serif;color:var(--white);-webkit-font-smoothing:antialiased}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}img{display:block;max-width:100%}p{line-height:1.8}strong{font-weight:800}.wrap{width:min(var(--max),calc(100% - 80px));margin-inline:auto}
+  .hero{position:relative;min-height:610px;isolation:isolate;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+  .hero-photo{position:absolute;inset:0;z-index:-2;background:url('assets/siemens-sustainability-hero.jpg') 50% 46% / cover no-repeat;filter:saturate(.95)}
+  .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,51,.98) 0%,rgba(0,0,50,.96) 27%,rgba(0,0,50,.78) 59%,rgba(0,0,45,.54) 100%),linear-gradient(0deg,var(--navy) 0%,transparent 44%)}
+  .hero-inner{padding:79px 0 87px}.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.17em;color:var(--yellow);font-weight:800;text-transform:uppercase;margin:0 0 27px}.eyebrow::before{content:"";width:30px;height:2px;background:var(--yellow)}.eyebrow img{height:21px;width:auto;max-width:155px;object-fit:contain}
+  h1{font-weight:900;font-size:clamp(43px,5.9vw,83px);letter-spacing:-.055em;line-height:1.07;margin:0 0 22px;max-width:820px}h1 span{color:var(--yellow);display:block}.headline-rule{height:3px;width:155px;background:var(--yellow);margin:28px 0 25px}.hero-lead{max-width:770px;color:#f1f0fa;font-size:clamp(13px,1.2vw,16px);line-height:1.83;margin:0}.hero-lead strong{color:var(--yellow)}
+  .section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--yellow);margin:0 0 14px}h2{font-weight:850;font-size:clamp(27px,3.5vw,42px);line-height:1.14;letter-spacing:-.042em;margin:0 0 16px}.section-heading{display:flex;gap:24px;align-items:center;margin:0 0 25px}.section-heading h2{font-size:clamp(23px,2.55vw,32px);margin:0;white-space:nowrap}.section-heading .line{flex:1;height:2px;background:var(--yellow)}
+  .context{display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;padding-top:54px;padding-bottom:56px;border-bottom:1px solid var(--line)}.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:hidden;border-radius:13px;border:1px solid var(--line);background:rgba(63,59,112,.54)}.fact{padding:21px 17px;border-right:1px solid var(--line);min-width:0}.fact:last-child{border:0}.fact small{display:block;color:#c5c2e0;text-transform:uppercase;font-weight:800;font-size:9px;letter-spacing:.09em;margin-bottom:11px}.fact b{display:block;font-size:12px;line-height:1.48}.fact img{width:auto;max-width:108px;height:25px;object-fit:contain;object-position:left center}.context p{font-size:13.5px;color:var(--muted);margin:0}
+  .challenges{padding-top:68px;padding-bottom:66px}.pressure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.pressure-card{background:var(--purple);border:1px solid rgba(255,255,255,.08);border-top:2px solid var(--yellow);border-radius:11px;padding:22px 18px 21px;display:flex;flex-direction:column;min-height:265px}.pressure-card h3{margin:0 0 13px;font-size:13px;line-height:1.35;font-weight:800;min-height:36px}.pressure-number{font-size:clamp(35px,3.9vw,54px);color:var(--yellow);font-weight:900;letter-spacing:-.055em;line-height:1;margin:0 0 7px}.pressure-card .descriptor{font-size:10px;font-weight:700;color:#f8f6ff;min-height:25px}.pressure-card p{font-size:11px;line-height:1.7;color:#e5e2f5;margin:10px 0 0;flex:1}.pressure-card p strong{color:#fff}.source-note{font-size:9px;color:#b6b3d5;line-height:1.6;margin:12px 0 0}
+  .act ons{background:linear-gradient(180deg,#080849 0%,var(--navy) 100%);padding:67px 0 72px}.action-intro{font-size:13px;color:var(--muted);max-width:820px;margin:-2px 0 31px}.action-stage{display:grid;grid-template-columns:125px minmax(0,1fr);gap:24px;position:relative;padding:28px 0;border-top:1px solid var(--line)}.action-index{font-size:56px;line-height:1;font-weight:900;color:rgba(250,255,0);letter-spacing:-.06em}.action-text h3{font-size:19px;font-weight:800;margin:0 0 14px}.action-text p{font-size:12.5px;line-height:1.88;color:#e7e4f9;margin:0 0 15px;max-width:1010px}.action-text p:last-child{margin-bottom:0}.action-text strong{color:#fff}.action-text .emph{color:var(--yellow)}
+  .focus-panel{display:grid;grid-template-columns:1fr 340px;gap:26px;align-items:center}.focus-panel img{width:100%;height:236px;object-fit:cover;border-radius:10px;box-shadow:0 15px 30px rgba(0,0,22,.28)}.focus-panel .label{display:inline-block;color:var(--yellow);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:750;margin:0 0 8px}
+  .sales-kit-card{display:grid;grid-template-columns:1fr 360px;gap:25px;align-items:center;background:transparent;border:0;border-radius:0;padding:0;margin:18px 0 0}.sales-kit-card img{height:210px;width:100%;object-fit:cover;border-radius:7px}.sales-kit-card p{margin:0}.industry-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.industry-tags span{display:inline-flex;padding:8px 11px;border:1px solid rgba(250,255,0,.25);border-radius:50px;font-size:10px;color:#f1f0fc}
+  .impact{padding:71px 0 76px}.impact-intro{font-size:13px;color:var(--muted);margin:-5px 0 28px}.impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.impact-card{min-width:0;display:flex;flex-direction:column;background:var(--purple);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}.impact-card img{width:100%;height:186px;object-fit:cover}.impact-body{padding:22px 22px 24px;display:flex;flex:1;flex-direction:column;align-items:flex-start}.impact-body h3{font-size:14px;margin:0 0 13px;font-weight:800}.impact-big{font-size:clamp(36px,4.3vw,55px);font-weight:900;letter-spacing:-.052em;line-height:1.05;color:var(--yellow);margin:0 0 10px}.impact-big.words{font-size:clamp(28px,2.8vw,38px);letter-spacing:-.045em}.impact-body p{font-size:11.5px;line-height:1.82;color:#eeeafb;margin:0}.impact-body p strong{color:white}.impact-body .details{margin-top:9px}.impact-body a{margin-top:auto;padding-top:17px;font-size:11px;color:var(--yellow);font-weight:800;text-decoration:none}.impact-body a:hover{text-decoration:underline}.impact-card .mini-note{font-size:10px;color:#c5c2e4;margin-top:auto;padding-top:14px}
+  .footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding:25px 0 35px;color:#bcb9dc;font-size:11px}.footer a{color:var(--yellow);font-weight:800;text-decoration:none}.footer a:hover{text-decoration:underline}
+  @media(max-width:1080px){.pressure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pressure-card{min-height:226px}.focus-panel{grid-template-columns:1fr 290px}.sales-kit-card{grid-template-columns:1fr 300px}.impact-card img{height:160px}}
+  @media(max-width:750px){.wrap{width:min(100% - 38px,590px)}.hero{min-height:0}.hero-inner{padding:72px 0 78px}.hero-photo{background-position:59% center}.hero-shade{background:linear-gradient(90deg,rgba(0,0,51,.97) 0%,rgba(0,0,48,.87) 100%),linear-gradient(0deg,var(--navy) 0%,transparent 50%)}h1{font-size:clamp(39px,9.2vw,61px)}.context{grid-template-columns:1fr;gap:28px;padding-top:45px;padding-bottom:48px}.facts{order:1}.context-copy{order:2}.challenges{padding-top:50px;padding-bottom:52px}.pressure-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pressure-card{min-height:260px;padding:17px 14px}.actions{padding:52px 0 59px}.action-stage{grid-template-columns:1fr;gap:7px}.action-index{font-size:34px}.focus-panel,.sales-kit-card{grid-template-columns:1fr}.focus-panel img,.sales-kit-card img{height:235px}.sales-kit-card{gap:12px}.impact{padding:54px 0 58px}.impact-grid{grid-template-columns:1fr}.impact-card{display:grid;grid-template-columns:38% 62%}.impact-card img{height:100%;min-height:190px}.impact-body{padding:19px 20px}.impact-big{font-size:42px}.impact-big.words{font-size:29px}.footer{flex-direction:column;align-items:flex-start}.section-heading{gap:10px}.section-heading h2{white-space:normal}}
+  @media(max-width:445px){.pressure-card p{font-size:12px}.impact-body p{font-size:12px}.facts{grid-template-columns:1fr}.fact{border-right:0;border-bottom:1px solid var(--line);padding:14px 17px}.fact:last-child{border:0}.fact small{margin-bottom:4px}.pressure-grid{grid-template-columns:1fr}.pressure-card{min-height:0}.pressure-card h3{min-height:0}.pressure-card .descriptor{min-height:0}.impact-card{display:block}.impact-card img{height:196px}.industry-tags span{font-size:9px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+ <section class="hero" aria-labelledby="project-title">
+  <div class="hero-photo" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-inner wrap">
+   <p class="eyebrow"><img src="assets/siemens-logo.png" alt="Siemens"> <span>Jan – Dec 2023</span></p>
+   <h1 id="project-title"><span>SUSTAINABILITY</span>@SIEMENS VIETNAM</h1>
+   <div class="headline-rule"></div>
+   <p class="hero-lead">In 2023, Siemens Digital Industries Vietnam set an ambitious goal: <strong>to become the first country in ASEAN to accelerate sustainability initiatives internally and across its partner ecosystem</strong> – with the aim of turning Sustainability from a mere concept into a driver of sales growth.</p>
+  </div>
+ </section>
+
+ <section class="context wrap" aria-label="The starting point">
+  <div class="facts" aria-label="Project information">
+   <div class="fact"><small>Organization</small><img src="assets/siemens-logo.png" alt="Siemens"></div>
+   <div class="fact"><small>Business area</small><b>Digital Industries Vietnam</b></div>
+   <div class="fact"><small>Period</small><b>Jan – Dec 2023</b></div>
+  </div>
+  <div class="context-copy">
+   <p class="section-kicker">01 / The starting point</p>
+   <h2>Turning sustainability into a business growth driver.</h2>
+   <p>The initiative focused on understanding internal awareness, partner readiness, regulatory pressures and untapped customer opportunities before translating sustainability into relevant market offerings.</p>
+  </div>
+ </section>
+
+ <section class="challenges wrap" aria-labelledby="pressure-title">
+  <p class="section-kicker">02 / Market and stakeholder context</p>
+  <div class="section-heading"><h2 id="pressure-title">Stakeholder pressures</h2><span class="line" aria-hidden="true"></span></div>
+  <div class="pressure-grid">
+   <article class="pressure-card"><h3>Internal awareness gap</h3><div class="pressure-number">85%</div><span class="descriptor">employees</span><p>Had heard of sustainability, but <strong>misunderstood it</strong>, believing it had <strong>no business impact</strong>.</p><div class="source-note">Survey @ Siemens Vietnam, Mar 2023</div></article>
+   <article class="pressure-card"><h3>Limited partner vision</h3><div class="pressure-number">80%</div><span class="descriptor">local partners</span><p>Saw <strong>no economic and financial opportunity</strong> to collaborate on sustainability.</p><div class="source-note">Survey @ Siemens Vietnam, Mar 2023</div></article>
+   <article class="pressure-card"><h3>Regulatory pressure</h3><div class="pressure-number">2,000+</div><span class="descriptor">firms</span><p>Were mandated to report emissions by 2025, aligning with Vietnam’s target of a <strong>15% GHG reduction by 2030</strong> compared to 2014 levels.</p><div class="source-note">Decision 01/2022/QĐ-TTg, as cited in original portfolio</div></article>
+   <article class="pressure-card"><h3>Untapped key accounts</h3><div class="pressure-number">100+</div><span class="descriptor">customers among the 2,000 firms</span><p>Were existing Siemens clients – but major players like <strong>Samsung Vietnam, LG, DRC Tire</strong> were not yet engaged.</p><div class="source-note">2023 target-account analysis, original portfolio</div></article>
+  </div>
+ </section>
+
+ <section class="actions" aria-labelledby="action-title">
+  <div class="wrap">
+   <p class="section-kicker">03 / From insight to market action</p>
+   <div class="section-heading"><h2 id="action-title">Strategic actions</h2><span class="line" aria-hidden="true"></span></div>
+   <div class="action-stage">
+    <div class="action-index">01</div>
+    <div class="action-text">
+      <h3>Strategic reframing</h3>
+      <div class="focus-panel">
+       <div>
+        <p>Localized Siemens’ global sustainability priorities to the Vietnam market context by conducting research on <strong>customer pain points, government policies and international market trends.</strong> The goal was to address the key question: <strong class="emph">Where could Siemens’ solutions deliver tangible value to its customers in Vietnam?</strong></p>
+        <p>Delivered <strong>10 internal training sessions</strong> over <strong>5 months</strong> (incl. ASEAN leadership and <strong>36 key partners</strong>) to position sustainability as a lever for business growth through energy efficiency, cost reduction, and operational optimization.</p>
+       </div>
+       <img src="assets/siemens-sustainability-talk.jpg" loading="lazy" alt="Siemens Sustainability event presentation in Vietnam">
+      </div>
+    </div>
+   </div>
+   <div class="action-stage">
+    <div class="action-index">02</div>
+    <div class="action-text">
+     <h3>Industry-specific sales kits</h3>
+     <div class="sales-kit-card">
+       <div>
+        <p>Collaborated with ASEAN and HQ teams to develop <strong>industry-specific “Sustainability” sales kits</strong> to tailor offerings to various industries, mapping out regulatory and operational pain points.</p>
+        <div class="industry-tags" aria-label="Industries served"><span>Electronics</span><span>Chemicals</span><span>Automotive</span><span>Food & Beverage</span></div>
+       </div>
+       <img src="assets/siemens-sustainability-hero.jpg" alt="Siemens Sustainability Hero" loading="lazy">
+     </div>
+    </div>
+   </div>
+   <div class="action-stage">
+    <div class="action-index">03</div>
+    <div class="action-text">
+     <h3>Go-to-market</h3>
+     <p>Rolled out Sales Kits to prioritize key accounts within the <strong>target pool of 2,000 companies.</strong></p>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="impact wrap" aria-labelledby="impact-title">
+   <p class="section-kicker">04 / Outcomes</p>
+   <div class="section-heading"><h2 id="impact-title">Business & social impact</h2><span class="line" aria-hidden="true"></span></div>
+   <div class="impact-grid">
+    <article class="impact-card">
+      <img src="assets/siemens-awards.jpg" alt="Siemens Digital Industries Vietnam sustainability team receiving recognition at an awards ceremony" loading="lazy">
+      <div class="impact-body"><h3>Professional awards</h3><div class="impact-big">2</div><p><strong>Strategic awards</strong></p><p class="details"><strong>Siemens Digital Industries Vietnam Frontrunner</strong> and <strong>Werner von Siemens Award 2024</strong>.</p></div>
+    </article>
+    <article class="impact-card">
+      <img src="assets/siemens-asean-leadership.jpg" alt="Siemens ASEAN leadership team group photo" loading="lazy">
+      <div class="impact-body"><h3>Business impact</h3><div class="impact-big">CAD 3.2M</div><p><strong>“Sustainability-focused” project wins</strong> in electric vehicles and virtualization.</p><p class="mini-note">Result reported in the original project portfolio.</p></div>
+    </article>
+    <article class="impact-card">
+      <img src="assets/sdmd-guest-speaker.jpg" alt="Speaking at the International Forum on Sustainable Development of the Mekong Delta in 2023" loading="lazy">
+      <div class="impact-body"><h3>Social impact</h3><div class="impact-big words">Guest speaker</div><p>At the <strong>International Forum on Sustainable Development of the Mekong Delta (SDMD 2023)</strong> – a regional platform engaging policymakers, experts, and industry leaders on climate resilience and green innovation.</p><a href="https://www.youtube.com/watch?v=2SRiBOmF-gQ" target="_blank" rel="noopener noreferrer">View event reference ↗</a></div>
+    </article>
+   </div>
+ </section>
+</main>
+<footer class="footer wrap"><span>© 2026 Daxton Huynh · Sustainability @Siemens Vietnam</span><a href="../../index.html#business">← Back to Me in Business</a></footer>
+</body>
+</html>
